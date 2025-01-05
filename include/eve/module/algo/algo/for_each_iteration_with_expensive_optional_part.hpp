@@ -194,7 +194,7 @@ namespace detail
       // expensive part before main loop should help when expensive part
       // it forms a separate while loop.
       expensive_part:
-        if( delegate.expensive_part(f) ) return;
+        if( delegate.expensive_part(aligned_f) ) return;
         aligned_f += iterator_cardinal_v<I>;
       main_loop:
         // handles aligned_f == aligned_l
